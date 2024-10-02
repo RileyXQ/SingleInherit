@@ -4,6 +4,7 @@ public class Main
 {
     public static void main(String[] args) {
 
+        System.out.println("***** WITHOUT INHERITANCE *****");
         Dog dog = new Dog("Fido", 7);
         Cat cat = new Cat("Fluffy", 2);
 
@@ -14,6 +15,7 @@ public class Main
         cat.sleep();
 
 
+        System.out.println("***** WITH INHERITANCE *****");
         // polymorphism ChildDog is a child of Animal, so I can give it the data type Animal
         // while still calling the ChildDog constructor.
         Animal cDog = new ChildDog("Fido", 8);
