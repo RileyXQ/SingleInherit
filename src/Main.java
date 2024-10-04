@@ -1,5 +1,10 @@
 import InheritanceExamples.*;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class Main
 {
     public static void main(String[] args) {
@@ -9,33 +14,64 @@ public class Main
         Cat cat = new Cat("Fluffy", 2);
 
         System.out.println(dog);
-        System.out.println(cat);
+        dog.setAge(15);
+        dog.sleep();
+        dog.eat();
+
         System.out.println();
-
+        System.out.println(cat);
+        cat.setAge(15);
         cat.sleep();
+        cat.eat();
 
 
-        System.out.println("***** WITH INHERITANCE *****");
-        // polymorphism ChildDog is a child of Animal, so I can give it the data type Animal
-        // while still calling the ChildDog constructor.
+        System.out.println("\n***** WITH INHERITANCE *****");
         Animal cDog = new ChildDog("Fido", 8);
         Animal cCat = new ChildCat("Fluffers", 13);
 
-        System.out.println();
 
+
+
+
+        System.out.println();
         System.out.println(cDog);
-        System.out.println(cCat);
-
-        System.out.println();
-
         cDog.setAge(5); // method defined in Animal class
-        cCat.setAge(4); // method defined in Animal class
-
-        System.out.println(cDog);
-        System.out.println(cCat);
+        cDog.sleep(); // method defined in Animal class
+        cDog.eat(); // method defined in Animal class
 
         System.out.println();
-        cDog.sleep();
-        cCat.sleep();
+        System.out.println(cCat);
+        cCat.setAge(4); // method defined in Animal class
+        cCat.sleep(); // method defined in Animal class
+        cCat.eat(); // method defined in Animal class
+
+        List<String> names = Arrays.asList(
+                "Liam",
+                "Emma",
+                "Noah",
+                "Olivia",
+                "Ava",
+                "Sophia",
+                "Isabella",
+                "Mason",
+                "Logan",
+                "Lucas",
+                "Charlotte",
+                "Amelia",
+                "Harper",
+                "Evelyn",
+                "James",
+                "Jack"
+        );
+
+        List<String> names_s = names.stream()
+                .filter(name -> name.startsWith("A"))
+                .map(String::toUpperCase)
+                .toList();
+
+        System.out.println("Names that start with A: " + names_s);
+
+
     }
 }
+

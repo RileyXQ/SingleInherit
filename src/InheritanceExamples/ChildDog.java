@@ -10,25 +10,12 @@ public class ChildDog extends Animal
         super(name,age);
     }
 
+@Override
+public void eat()
+{
+    System.out.println(name + " is eating a fresh ham bone..");
+}
 
-    /**
-     * Override Animals setAge() method to print a message on childDogs.
-     * @param newAge dogs new age
-     * @return true if set. false if invalid number.
-     */
-    @Override
-    public boolean setAge(int newAge)
-    {
-        // not a valid age
-        if(newAge < 0)
-            return false;
-
-        System.out.println("Changing " + name + "s age to: " + newAge);
-        age = newAge;
-        return true;
-    }
-
-    // of course I want the children to print differently based on the animal type.
     @Override
     public String toString()
     {

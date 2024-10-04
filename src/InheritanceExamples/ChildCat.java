@@ -11,6 +11,11 @@ public class ChildCat extends Animal
     }
 
 
+    @Override
+    public void eat()
+    {
+        System.out.println(name + " is eating a fresh fish..");
+    }
     // of course, I want the children to print differently based on the animal type.
     @Override
     public String toString()

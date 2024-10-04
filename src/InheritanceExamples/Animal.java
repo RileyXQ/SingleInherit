@@ -26,18 +26,21 @@ public class Animal
         System.out.println(name + " is sleeping..");
     }
 
-    public boolean setName(String newName) {
+    public void setAge(int newAge)
+    {
+        System.out.println("Updating " + name + "'s age to: " + newAge );
+        age = newAge;
+    }
+
+    public int getAge() { return age; }
+
+    public String getName() { return name; }
+    public boolean setName(String newName)
+    {
+        if(newName.isEmpty()) return false;
         name = newName;
         return true;
     }
 
-    public String getName() { return name; }
-
-    public boolean setAge(int newAge) {
-        age = newAge;
-        return true;
-    }
-
-    public int getAge() { return age; }
 
 }

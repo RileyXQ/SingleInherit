@@ -9,7 +9,7 @@ public class Dog {
     }
 
     public void eat() {
-        System.out.println(name + " is eating.");
+        System.out.println(name + " is eating a fresh ham bone..");
     }
 
     public void sleep() {
@@ -20,12 +20,23 @@ public class Dog {
         System.out.println(name + " says woof.");
     }
 
-    // it would make sense that each child class overrides this, in fact every object
-    // is a child to the Object class
+    public void setAge(int newAge)
+    {
+        System.out.println("Updating " + name + "'s age to: " + newAge );
+        age = newAge;
+    }
 
-    // When we declare the datattype dog and pass to print it will call this
-    // even if we say Dog d = new Animal("Fido", 3);
+    public int getAge() { return age; }
 
+    public String getName() { return name; }
+
+
+    public boolean setName(String newName)
+    {
+        if(newName.isEmpty()) return false;
+        name = newName;
+        return true;
+    }
 
 
     @Override
@@ -39,3 +50,7 @@ public class Dog {
     }
 
 }
+
+
+
+
