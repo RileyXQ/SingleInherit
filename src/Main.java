@@ -45,31 +45,6 @@ public class Main
         cCat.sleep(); // method defined in Animal class
         cCat.eat(); // method defined in Animal class
 
-        List<String> names = Arrays.asList(
-                "Liam",
-                "Emma",
-                "Noah",
-                "Olivia",
-                "Ava",
-                "Sophia",
-                "Isabella",
-                "Mason",
-                "Logan",
-                "Lucas",
-                "Charlotte",
-                "Amelia",
-                "Harper",
-                "Evelyn",
-                "James",
-                "Jack"
-        );
-
-        List<String> names_s = names.stream()
-                .filter(name -> name.startsWith("A"))
-                .map(String::toUpperCase)
-                .toList();
-
-        System.out.println("Names that start with A: " + names_s);
 
 
     }
